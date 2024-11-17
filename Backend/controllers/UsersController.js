@@ -71,4 +71,36 @@ const Pagination = async (req, res) => {
   res.json(results);
 };
 
-module.exports = { getAllUsers, getSearchData, Pagination };
+const getUserById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const data = await Users.findOne({ _id: id });
+    return res.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const updateUserById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updateUserdata = req.body;
+    const updateData = await Users.updateOne(
+      { _id: id },
+      {
+        $set: updateUserdata,
+      }
+    );
+    return res.status(200).json(updateData);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = {
+  getAllUsers,
+  getSearchData,
+  Pagination,
+  getUserById,
+  updateUserById,
+};

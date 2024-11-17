@@ -6,6 +6,7 @@ import { Button } from "flowbite-react";
 
 export const UserData = () => {
   const [users, setUsers] = useState([]);
+  console.log(users);
   const [moredata, setMoreData] = useState("");
   console.log(moredata);
   const [searchQuery, setSearchQuery] = useState("");
@@ -147,8 +148,9 @@ export const UserData = () => {
                   <th>Description</th>
                   <th>Location</th>
                   <th>Google Map</th>
-                  <th>Image</th>
-                  <th>More</th>
+                  <th>Update</th>
+                  <th>Details</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
@@ -174,14 +176,15 @@ export const UserData = () => {
                           <td>
                             {users.location.city}, {users.location.country}
                           </td>
-                          <td>
+                          <td className="">
                             <Button
+                              className="ml-5 mb-2 mt-2"
                               onClick={() =>
                                 setLocation(users.location.maplocation)
                               }
                             >
                               <img
-                                src="./download.jpg"
+                                src="./download.png"
                                 alt=""
                                 width={50}
                                 height={50}
@@ -189,17 +192,34 @@ export const UserData = () => {
                             </Button>
                           </td>
                           <td>
-                            <img
-                              src={users.photoUrl}
-                              alt="id"
-                              width="25px"
-                              height="25px"
-                            />
+                            <Link to={`/users/${users._id}/update`}>
+                              <h1
+                                color="blue"
+                                className="p-1 ml-4 text-blue-500 "
+                              >
+                                Edit
+                              </h1>
+                            </Link>
                           </td>
                           <td>
-                            <button onClick={() => setMoreData(users)}>
-                              More
-                            </button>
+                            <Link to={`/users/${users._id}/details`}>
+                              <Button
+                                color="blue"
+                                className="p-1 w-20 bg-blue-950  rounded-md"
+                              >
+                                More..
+                              </Button>
+                            </Link>
+                          </td>
+                          <td>
+                            <Link to={`/users/${users._id}/update`}>
+                              <h1
+                                color="blue"
+                                className="p-1 ml-4 text-red-600 "
+                              >
+                                Delete
+                              </h1>
+                            </Link>
                           </td>
                         </tr>
                       </>

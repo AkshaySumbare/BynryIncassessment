@@ -1,15 +1,16 @@
 import { Navbar } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import "./header.css";
 
 export const Header = () => {
   return (
     <>
       <Navbar>
-        <div className=" bg-[#3f3c66] w-full flex justify-between text-white h-16 mb-5  p-3">
-          <Link to={"/"}>Dashboard</Link>
-      
-          <Link to={"/details"}>Extra Details</Link>
+        <div className="  w-full flex justify-around bg-slate-600 text-white ">
+          <Link className="hover:text-blue-600 p-3" to={"/"}>
+            Dashboard
+          </Link>
         </div>
       </Navbar>
     </>
