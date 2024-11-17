@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Alice Thompson",
+    "description": "Loves exploring nature and photography",
+    "location": {
+      "city": "pune",
+      "country": "India",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60502.966421097866!2d73.67601900992653!3d18.599476122610728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc048041bef%3A0xd0c9eb5ac3c3dee5!2sHinjawadi%2C%20Pune%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1731644652639!5m2!1sen!2sin"
+    },
+    "contact": "+1-555-0111",
+    "interest": "Nature, Photography, Hiking"
+  },
+  {
+    "name": "Carlos Fernandez",
+    "description": "Passionate about technology and programming",
+    "location": {
+      "city": "Juhu Mumbai",
+      "country": "India",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30161.35730189187!2d72.78665059747298!3d19.10021147890907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c994afbc6de9%3A0xd36760e4a1a77177!2sJuhu%20Beach!5e0!3m2!1sen!2sin!4v1731663103954!5m2!1sen!2sin"
+    },
+    "contact": "+34-555-0112",
+    "interest": "Tech, Coding, Gaming"
+  },
+  {
+    "name": "Bella Chen",
+    "description": "Food lover and travel enthusiast",
+    "location": {
+      "city": "Benglure",
+      "country": "India",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.7749179518!2d77.30126246150184!3d12.954459536902307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1731663194032!5m2!1sen!2sin"
+    },
+    "contact": "+86-555-0113",
+    "interest": "Food, Travel, Writing"
+  },
+  {
+    "name": "Daniel Kumar",
+    "description": "Yoga teacher and wellness coach",
+    "location": {
+      "city": "Mumbai",
+      "country": "India",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.951046296!2d76.76356261822156!3d28.644287349748506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1731663251673!5m2!1sen!2sin"
+    },
+    "contact": "+91-555-0114",
+    "interest": "Yoga, Health, Meditation"
+  },
+  {
+    "name": "Emma White",
+    "description": "Graphic designer and art enthusiast",
+    "location": {
+      "city": "Melbourne",
+      "country": "Australia",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65206564.26929059!2d51.83357121042451!3d-4.0422850870733384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b2bfd076787c5df%3A0x538267a1955b1352!2sAustralia!5e0!3m2!1sen!2sin!4v1731663362524!5m2!1sen!2sin"
+    },
+    "contact": "+61-555-0115",
+    "interest": "Art, Design, Photography"
+  },
+  {
+    "name": "Felix Brown",
+    "description": "Avid sports fan and fitness enthusiast",
+    "location": {
+      "city": "Toronto",
+      "country": "Canada",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43031270.8771221!2d-135.67074652677977!3d48.83112040414076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0d03d337cc6ad9%3A0x9968b72aa2438fa5!2sCanada!5e0!3m2!1sen!2sin!4v1731663403007!5m2!1sen!2sin"
+    },
+    "contact": "+1-555-0116",
+    "interest": "Sports, Fitness, Travel"
+  },
+  {
+    "name": "Grace Li",
+    "description": "Fashion designer and stylist",
+    "location": {
+      "city": "Shanghai",
+      "country": "China",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27129417.105704706!2d82.72847895338947!3d33.89747144672949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2sin!4v1731663475675!5m2!1sen!2sin"
+    },
+    "contact": "+86-555-0117",
+    "interest": "Fashion, Art, Styling"
+  },
+  {
+    "name": "Hassan Malik",
+    "description": "Entrepreneur and business consultant",
+    "location": {
+      "city": "Dubai",
+      "country": "UAE",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722544.522375903!2d51.30620242250311!3d24.336131436733066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1731663535995!5m2!1sen!2sin"
+    },
+    "contact": "+971-555-0118",
+    "interest": "Business, Investing, Networking"
+  },
+  {
+    "name": "Isabel Torres",
+    "description": "Environmentalist and advocate for sustainability",
+    "location": {
+      "city": "Sao Paulo",
+      "country": "Brazil",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31799341.63401263!2d-73.2126920128751!3d-13.365469118610026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1731663585323!5m2!1sen!2sin"
+    },
+    "contact": "+55-555-0119",
+    "interest": "Environment, Sustainability, Volunteering"
+  },
+  {
+    "name": "Jake Nolan",
+    "description": "Digital marketer and social media strategist",
+    "location": {
+      "city": "Cape Town",
+      "country": "South Africa",
+      "maplocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27504989.77165157!2d5.827989637198794!3d-32.69820403997267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e0!3m2!1sen!2sin!4v1731663615018!5m2!1sen!2sin"
+    },
+    "contact": "+27-555-0120",
+    "interest": "Marketing, Social Media, Travel"
+  }
+]
