@@ -8,6 +8,7 @@ router.route("/getSearch").get(getdata.getSearchData);
 router.route("/getPaginate").get(getdata.Pagination);
 router.route("/user/:id").get(getdata.getUserById);
 router.route("/user/update/:id").put(getdata.updateUserById);
+router.route("/user/delete/:id").delete(getdata.deleteUserById);
 
 module.exports = router;
  

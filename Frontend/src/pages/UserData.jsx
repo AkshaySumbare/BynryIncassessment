@@ -85,6 +85,27 @@ export const UserData = () => {
     }
   };
 
+  const deleteUser = async (id) => {
+    try {
+      const res = await fetch(
+        `http://localhost:3000/api/users/user/delete/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await res.json();
+      alert("deleted Successfully");
+      if (res.ok) {
+        getPaginatedUser();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     currentPage.current = 1;
     getPaginatedUser();
@@ -195,7 +216,7 @@ export const UserData = () => {
                             <Link to={`/users/${users._id}/update`}>
                               <h1
                                 color="blue"
-                                className="p-1 ml-4 text-blue-500 "
+                                className="p-1 ml-4 text-green-600 "
                               >
                                 Edit
                               </h1>
@@ -212,14 +233,13 @@ export const UserData = () => {
                             </Link>
                           </td>
                           <td>
-                            <Link to={`/users/${users._id}/update`}>
-                              <h1
-                                color="blue"
-                                className="p-1 ml-4 text-red-600 "
-                              >
-                                Delete
-                              </h1>
-                            </Link>
+                            <h1
+                              color="blue"
+                              className="p-1 ml-4 text-red-600 cursor-pointer "
+                              onClick={() => deleteUser(users._id)}
+                            >
+                              Delete
+                            </h1>
                           </td>
                         </tr>
                       </>

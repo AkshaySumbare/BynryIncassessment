@@ -26,19 +26,17 @@ export const Extradetails = () => {
     <div className="container mx-auto p-4 h-[1000px]">
       <div className="container mx-auto p-4">
         <h1 className="text-2xl ">Profile Details</h1>
-        <div className="flex justify-between">
+        <div className="flex justify-between text-black">
           <div className="text-start">
             <div className="">
-              <h2 className=" font-semibold mb-2 text-4xl text-white">
+              <h2 className=" font-semibold mb-2 text-4xl text-black">
                 {`Name: ${data.name}`}
               </h2>
               <br />
-              <p className=" text-2xl text-white">
-                Description: {data.description}
-              </p>
+              <p className=" text-2xl ">Description: {data.description}</p>
             </div>
             <br />
-            <div className="text-white">
+            <div className="">
               <h1 className="text-2xl">Interest: {data.interest}</h1>
 
               <br />

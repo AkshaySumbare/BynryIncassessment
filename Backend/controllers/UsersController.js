@@ -97,10 +97,22 @@ const updateUserById = async (req, res) => {
   }
 };
 
+const deleteUserById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    await Users.deleteOne({ _id: id });
+
+    return res.status(200).json({ message: "user Deleted Successfully" });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 module.exports = {
   getAllUsers,
   getSearchData,
   Pagination,
   getUserById,
   updateUserById,
+  deleteUserById,
 };
