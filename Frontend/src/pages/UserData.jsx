@@ -11,9 +11,9 @@ export const UserData = () => {
   console.log(moredata);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortValue, setSortValue] = useState("");
-  const [location, setLocation] = useState(
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60502.966421097866!2d73.67601900992653!3d18.599476122610728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc048041bef%3A0xd0c9eb5ac3c3dee5!2sHinjawadi%2C%20Pune%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1731644652639!5m2!1sen!2sin"
-  );
+  // const [location, setLocation] = useState(
+  //   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60502.966421097866!2d73.67601900992653!3d18.599476122610728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc048041bef%3A0xd0c9eb5ac3c3dee5!2sHinjawadi%2C%20Pune%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1731644652639!5m2!1sen!2sin"
+  // );
 
   const [limit, setLimit] = useState(5);
   const [pageCount, setPageCount] = useState(1);
@@ -198,19 +198,16 @@ export const UserData = () => {
                             {users.location.city}, {users.location.country}
                           </td>
                           <td className="">
-                            <Button
-                              className="ml-5 mb-2 mt-2"
-                              onClick={() =>
-                                setLocation(users.location.maplocation)
-                              }
-                            >
-                              <img
-                                src="./download.png"
-                                alt=""
-                                width={50}
-                                height={50}
-                              />
-                            </Button>
+                            <Link to={`/users/${users._id}/location`}>
+                              <Button className="ml-5 mb-2 mt-2">
+                                <img
+                                  src="./download.png"
+                                  alt=""
+                                  width={50}
+                                  height={50}
+                                />
+                              </Button>
+                            </Link>
                           </td>
                           <td>
                             <Link to={`/users/${users._id}/update`}>
@@ -268,19 +265,7 @@ export const UserData = () => {
               forcePage={currentPage.current - 1}
             />
           </div>
-
-          <h1 className="font-bold text-black"></h1>
-          <div className="">
-            <h1>{users.name}</h1>
-          </div>
-          <div className="map-responsive  ">
-            <iframe
-              src={location}
-              width={1200}
-              height={450}
-              loading="lazy"
-            ></iframe>
-          </div>
+          
         </div>
       </>
     </div>
