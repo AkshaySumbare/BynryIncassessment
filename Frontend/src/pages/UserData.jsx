@@ -6,15 +6,9 @@ import { Button } from "flowbite-react";
 
 export const UserData = () => {
   const [users, setUsers] = useState([]);
-  console.log(users);
-  const [moredata, setMoreData] = useState("");
-  console.log(moredata);
+
   const [searchQuery, setSearchQuery] = useState("");
   const [sortValue, setSortValue] = useState("");
-  // const [location, setLocation] = useState(
-  //   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60502.966421097866!2d73.67601900992653!3d18.599476122610728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc048041bef%3A0xd0c9eb5ac3c3dee5!2sHinjawadi%2C%20Pune%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1731644652639!5m2!1sen!2sin"
-  // );
-
   const [limit, setLimit] = useState(5);
   const [pageCount, setPageCount] = useState(1);
   const currentPage = useRef();
@@ -31,7 +25,13 @@ export const UserData = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/users/getUsers?sort=${value}`
+        `http://localhost:3000/api/users/getUsers?sort=${value}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       const data = await res.json();
 
@@ -50,7 +50,13 @@ export const UserData = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/users/getSearch?search=${searchQuery}`
+        `http://localhost:3000/api/users/getSearch?search=${searchQuery}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       const data = await res.json();
 
@@ -71,10 +77,15 @@ export const UserData = () => {
   const getPaginatedUser = async () => {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/users/getPaginate?page=${currentPage.current}&limit=${limit}`
+        `http://localhost:3000/api/users/getPaginate?page=${currentPage.current}&limit=${limit}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       const data = await res.json();
-
       setPageCount(data.pageCount);
 
       if (res.ok) {
@@ -121,7 +132,7 @@ export const UserData = () => {
           <div className=" font-bold text-2xl mt-5"> Dashboar</div>
           <div className="flex justify-around">
             <div className="">
-              <div className="">
+              <div className="border border-black">
                 <select
                   name=""
                   id=""
@@ -147,12 +158,12 @@ export const UserData = () => {
               </div>
             </div>
 
-            <div className="">
+            <div className="border border-black">
               <form action="">
                 <input
                   type="text"
                   placeholder="Search"
-                  className="border-2 black mb-4 p-1"
+                  className="border-2 black p-1"
                   value={searchQuery}
                   onChange={handleSearch}
                 />
@@ -160,7 +171,7 @@ export const UserData = () => {
             </div>
           </div>
 
-          <div className="">
+          <div className="mt-4">
             <table>
               <thead>
                 <tr>
@@ -244,28 +255,28 @@ export const UserData = () => {
                   })}
               </tbody>
             </table>
+
             <ReactPaginate
-              className="flex space-x-5 justify-center mt-4 mb-8  "
+              className="flex space-x-4 justify-center mt-4 mb-8"
               breakLabel="..."
-              nextLabel="next >"
+              nextLabel="Next >"
               onPageChange={handlePageClick}
               pageRangeDisplayed={5}
               pageCount={pageCount}
-              previousLabel="< previous"
+              previousLabel="< Previous"
               renderOnZeroPageCount={null}
               marginPagesDisplayed={2}
-              containerClassName="pagination justify-content-center "
-              pageClassName="page-item"
-              pageLinkClassName="page-link"
-              previousClassName="page-item"
-              previousLinkClassName="page-link"
-              nextClassName="page-item"
-              nextLinkClassName="page-link"
-              activeClassName="active"
+              containerClassName="flex space-x-4"
+              pageClassName="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded cursor-pointer"
+              pageLinkClassName="text-black"
+              previousClassName="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded cursor-pointer"
+              previousLinkClassName="text-black"
+              nextClassName="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded cursor-pointer"
+              nextLinkClassName="text-black"
+              activeClassName="bg-blue text-white"
               forcePage={currentPage.current - 1}
             />
           </div>
-          
         </div>
       </>
     </div>

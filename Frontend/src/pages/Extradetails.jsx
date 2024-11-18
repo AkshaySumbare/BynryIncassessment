@@ -9,6 +9,13 @@ export const Extradetails = () => {
     try {
       const res = await fetch(
         `http://localhost:3000/api/users/user/${params.id}`
+        ,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       const data = await res.json();
 

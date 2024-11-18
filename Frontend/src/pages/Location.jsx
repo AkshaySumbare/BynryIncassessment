@@ -10,7 +10,13 @@ export const Location = () => {
   const getUserData = async (id) => {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/users/user/${params.id}`
+        `http://localhost:3000/api/users/user/${params.id}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       const data = await res.json();
 
@@ -27,7 +33,7 @@ export const Location = () => {
 
   return (
     <>
-      <div className="">
+      <div className="" class="italic">
         {location && location != null && location != undefined && (
           <div className="">
             <div className="mt-9 text-2xl ">
